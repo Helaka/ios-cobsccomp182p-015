@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		6E28A1BE23F112E6004AED4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28A1BD23F112E6004AED4B /* AppDelegate.swift */; };
 		6E28A1C023F112E6004AED4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28A1BF23F112E6004AED4B /* ViewController.swift */; };
-		6E28A1C323F112E6004AED4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E28A1C123F112E6004AED4B /* Main.storyboard */; };
 		6E28A1C623F112E6004AED4B /* Helaka_Cobscomp182p_015.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E28A1C423F112E6004AED4B /* Helaka_Cobscomp182p_015.xcdatamodeld */; };
 		6E28A1C823F112E9004AED4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E28A1C723F112E9004AED4B /* Assets.xcassets */; };
 		6E28A1CB23F112E9004AED4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E28A1C923F112E9004AED4B /* LaunchScreen.storyboard */; };
 		6E28A1D623F112E9004AED4B /* Helaka_Cobscomp182p_015Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28A1D523F112E9004AED4B /* Helaka_Cobscomp182p_015Tests.swift */; };
 		6E28A1E123F112E9004AED4B /* Helaka_Cobscomp182p_015UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28A1E023F112E9004AED4B /* Helaka_Cobscomp182p_015UITests.swift */; };
+		6E28A1EF23F12376004AED4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E28A1EE23F12376004AED4B /* Main.storyboard */; };
+		6E28A1F123F1B0C3004AED4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28A1F023F1B0C3004AED4B /* LoginViewController.swift */; };
+		6E28A1F323F1B0E3004AED4B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28A1F223F1B0E3004AED4B /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,6 @@
 		6E28A1BA23F112E6004AED4B /* Helaka-Cobscomp182p-015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Helaka-Cobscomp182p-015.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E28A1BD23F112E6004AED4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E28A1BF23F112E6004AED4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6E28A1C223F112E6004AED4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E28A1C523F112E6004AED4B /* Helaka_Cobscomp182p_015.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Helaka_Cobscomp182p_015.xcdatamodel; sourceTree = "<group>"; };
 		6E28A1C723F112E9004AED4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E28A1CA23F112E9004AED4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		6E28A1DC23F112E9004AED4B /* Helaka-Cobscomp182p-015UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Helaka-Cobscomp182p-015UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E28A1E023F112E9004AED4B /* Helaka_Cobscomp182p_015UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helaka_Cobscomp182p_015UITests.swift; sourceTree = "<group>"; };
 		6E28A1E223F112E9004AED4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E28A1EE23F12376004AED4B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		6E28A1F023F1B0C3004AED4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6E28A1F223F1B0E3004AED4B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,16 +103,17 @@
 		6E28A1BC23F112E6004AED4B /* Helaka-Cobscomp182p-015 */ = {
 			isa = PBXGroup;
 			children = (
+				6E28A1F423F1B0EB004AED4B /* ViewControllers */,
 				6E28A1BD23F112E6004AED4B /* AppDelegate.swift */,
-				6E28A1BF23F112E6004AED4B /* ViewController.swift */,
-				6E28A1C123F112E6004AED4B /* Main.storyboard */,
 				6E28A1C723F112E9004AED4B /* Assets.xcassets */,
+				6E28A1EE23F12376004AED4B /* Main.storyboard */,
 				6E28A1C923F112E9004AED4B /* LaunchScreen.storyboard */,
 				6E28A1CC23F112E9004AED4B /* Info.plist */,
 				6E28A1C423F112E6004AED4B /* Helaka_Cobscomp182p_015.xcdatamodeld */,
 			);
 			path = "Helaka-Cobscomp182p-015";
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		6E28A1D423F112E9004AED4B /* Helaka-Cobscomp182p-015Tests */ = {
 			isa = PBXGroup;
@@ -126,6 +131,16 @@
 				6E28A1E223F112E9004AED4B /* Info.plist */,
 			);
 			path = "Helaka-Cobscomp182p-015UITests";
+			sourceTree = "<group>";
+		};
+		6E28A1F423F1B0EB004AED4B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6E28A1BF23F112E6004AED4B /* ViewController.swift */,
+				6E28A1F023F1B0C3004AED4B /* LoginViewController.swift */,
+				6E28A1F223F1B0E3004AED4B /* SignUpViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +247,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E28A1EF23F12376004AED4B /* Main.storyboard in Resources */,
 				6E28A1CB23F112E9004AED4B /* LaunchScreen.storyboard in Resources */,
 				6E28A1C823F112E9004AED4B /* Assets.xcassets in Resources */,
-				6E28A1C323F112E6004AED4B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E28A1F123F1B0C3004AED4B /* LoginViewController.swift in Sources */,
 				6E28A1C623F112E6004AED4B /* Helaka_Cobscomp182p_015.xcdatamodeld in Sources */,
 				6E28A1C023F112E6004AED4B /* ViewController.swift in Sources */,
+				6E28A1F323F1B0E3004AED4B /* SignUpViewController.swift in Sources */,
 				6E28A1BE23F112E6004AED4B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +314,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6E28A1C123F112E6004AED4B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6E28A1C223F112E6004AED4B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6E28A1C923F112E9004AED4B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
