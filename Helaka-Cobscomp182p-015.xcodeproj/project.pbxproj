@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,9 @@
 		6E28A1EF23F12376004AED4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E28A1EE23F12376004AED4B /* Main.storyboard */; };
 		6E28A1F123F1B0C3004AED4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28A1F023F1B0C3004AED4B /* LoginViewController.swift */; };
 		6E28A1F323F1B0E3004AED4B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28A1F223F1B0E3004AED4B /* SignUpViewController.swift */; };
+		6E93A2D823F1E24D00F879DB /* signUpValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E93A2D723F1E24D00F879DB /* signUpValidation.swift */; };
+		6ED756FD23F1C6F9002CD6F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6ED756FC23F1C6F9002CD6F9 /* GoogleService-Info.plist */; };
+		F8297C25676DDA6F1296DECA /* Pods_Helaka_Cobscomp182p_015.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8720DA8CF13DA3381BBC14BD /* Pods_Helaka_Cobscomp182p_015.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C3FBB549E2768965FDB2ACD /* Pods-Helaka-Cobscomp182p-015.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Helaka-Cobscomp182p-015.debug.xcconfig"; path = "Target Support Files/Pods-Helaka-Cobscomp182p-015/Pods-Helaka-Cobscomp182p-015.debug.xcconfig"; sourceTree = "<group>"; };
 		6E28A1BA23F112E6004AED4B /* Helaka-Cobscomp182p-015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Helaka-Cobscomp182p-015.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E28A1BD23F112E6004AED4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E28A1BF23F112E6004AED4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +57,10 @@
 		6E28A1EE23F12376004AED4B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6E28A1F023F1B0C3004AED4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6E28A1F223F1B0E3004AED4B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6E93A2D723F1E24D00F879DB /* signUpValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpValidation.swift; sourceTree = "<group>"; };
+		6ED756FC23F1C6F9002CD6F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8720DA8CF13DA3381BBC14BD /* Pods_Helaka_Cobscomp182p_015.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Helaka_Cobscomp182p_015.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8DD6E6C33CBB4A6AD937DF5 /* Pods-Helaka-Cobscomp182p-015.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Helaka-Cobscomp182p-015.release.xcconfig"; path = "Target Support Files/Pods-Helaka-Cobscomp182p-015/Pods-Helaka-Cobscomp182p-015.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8297C25676DDA6F1296DECA /* Pods_Helaka_Cobscomp182p_015.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +89,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B252F0A57172EC668EABEDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8720DA8CF13DA3381BBC14BD /* Pods_Helaka_Cobscomp182p_015.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5384B33DD784DCE36AF5AAC7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C3FBB549E2768965FDB2ACD /* Pods-Helaka-Cobscomp182p-015.debug.xcconfig */,
+				F8DD6E6C33CBB4A6AD937DF5 /* Pods-Helaka-Cobscomp182p-015.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6E28A1B123F112E6004AED4B = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +113,8 @@
 				6E28A1D423F112E9004AED4B /* Helaka-Cobscomp182p-015Tests */,
 				6E28A1DF23F112E9004AED4B /* Helaka-Cobscomp182p-015UITests */,
 				6E28A1BB23F112E6004AED4B /* Products */,
+				5384B33DD784DCE36AF5AAC7 /* Pods */,
+				3B252F0A57172EC668EABEDA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,12 +131,14 @@
 		6E28A1BC23F112E6004AED4B /* Helaka-Cobscomp182p-015 */ = {
 			isa = PBXGroup;
 			children = (
+				6E93A2D623F1E22100F879DB /* Validations */,
 				6E28A1F423F1B0EB004AED4B /* ViewControllers */,
 				6E28A1BD23F112E6004AED4B /* AppDelegate.swift */,
 				6E28A1C723F112E9004AED4B /* Assets.xcassets */,
 				6E28A1EE23F12376004AED4B /* Main.storyboard */,
 				6E28A1C923F112E9004AED4B /* LaunchScreen.storyboard */,
 				6E28A1CC23F112E9004AED4B /* Info.plist */,
+				6ED756FC23F1C6F9002CD6F9 /* GoogleService-Info.plist */,
 				6E28A1C423F112E6004AED4B /* Helaka_Cobscomp182p_015.xcdatamodeld */,
 			);
 			path = "Helaka-Cobscomp182p-015";
@@ -143,6 +173,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		6E93A2D623F1E22100F879DB /* Validations */ = {
+			isa = PBXGroup;
+			children = (
+				6E93A2D723F1E24D00F879DB /* signUpValidation.swift */,
+			);
+			path = Validations;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +188,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E28A1E523F112E9004AED4B /* Build configuration list for PBXNativeTarget "Helaka-Cobscomp182p-015" */;
 			buildPhases = (
+				20A2D503570EE216FE8B2BC2 /* [CP] Check Pods Manifest.lock */,
 				6E28A1B623F112E6004AED4B /* Sources */,
 				6E28A1B723F112E6004AED4B /* Frameworks */,
 				6E28A1B823F112E6004AED4B /* Resources */,
+				8C95795EA7DF2F988007B4BB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E28A1EF23F12376004AED4B /* Main.storyboard in Resources */,
+				6ED756FD23F1C6F9002CD6F9 /* GoogleService-Info.plist in Resources */,
 				6E28A1CB23F112E9004AED4B /* LaunchScreen.storyboard in Resources */,
 				6E28A1C823F112E9004AED4B /* Assets.xcassets in Resources */,
 			);
@@ -269,6 +310,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20A2D503570EE216FE8B2BC2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Helaka-Cobscomp182p-015-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C95795EA7DF2F988007B4BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Helaka-Cobscomp182p-015/Pods-Helaka-Cobscomp182p-015-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Helaka-Cobscomp182p-015/Pods-Helaka-Cobscomp182p-015-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Helaka-Cobscomp182p-015/Pods-Helaka-Cobscomp182p-015-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6E28A1B623F112E6004AED4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -278,6 +361,7 @@
 				6E28A1C623F112E6004AED4B /* Helaka_Cobscomp182p_015.xcdatamodeld in Sources */,
 				6E28A1C023F112E6004AED4B /* ViewController.swift in Sources */,
 				6E28A1F323F1B0E3004AED4B /* SignUpViewController.swift in Sources */,
+				6E93A2D823F1E24D00F879DB /* signUpValidation.swift in Sources */,
 				6E28A1BE23F112E6004AED4B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +527,7 @@
 		};
 		6E28A1E623F112E9004AED4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C3FBB549E2768965FDB2ACD /* Pods-Helaka-Cobscomp182p-015.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -460,6 +545,7 @@
 		};
 		6E28A1E723F112E9004AED4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8DD6E6C33CBB4A6AD937DF5 /* Pods-Helaka-Cobscomp182p-015.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
