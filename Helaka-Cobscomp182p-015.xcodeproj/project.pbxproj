@@ -18,8 +18,8 @@
 		6E28A1F123F1B0C3004AED4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28A1F023F1B0C3004AED4B /* LoginViewController.swift */; };
 		6E28A1F323F1B0E3004AED4B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E28A1F223F1B0E3004AED4B /* SignUpViewController.swift */; };
 		6E89852623F25FF200071B31 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89852523F25FF200071B31 /* HomeViewController.swift */; };
+		6E89852823F2765300071B31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E89852723F2765300071B31 /* GoogleService-Info.plist */; };
 		6E93A2D823F1E24D00F879DB /* signUpValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E93A2D723F1E24D00F879DB /* signUpValidation.swift */; };
-		6ED756FD23F1C6F9002CD6F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6ED756FC23F1C6F9002CD6F9 /* GoogleService-Info.plist */; };
 		F8297C25676DDA6F1296DECA /* Pods_Helaka_Cobscomp182p_015.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8720DA8CF13DA3381BBC14BD /* Pods_Helaka_Cobscomp182p_015.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,8 +59,8 @@
 		6E28A1F023F1B0C3004AED4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6E28A1F223F1B0E3004AED4B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6E89852523F25FF200071B31 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6E89852723F2765300071B31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E93A2D723F1E24D00F879DB /* signUpValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpValidation.swift; sourceTree = "<group>"; };
-		6ED756FC23F1C6F9002CD6F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8720DA8CF13DA3381BBC14BD /* Pods_Helaka_Cobscomp182p_015.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Helaka_Cobscomp182p_015.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8DD6E6C33CBB4A6AD937DF5 /* Pods-Helaka-Cobscomp182p-015.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Helaka-Cobscomp182p-015.release.xcconfig"; path = "Target Support Files/Pods-Helaka-Cobscomp182p-015/Pods-Helaka-Cobscomp182p-015.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,8 +139,8 @@
 				6E28A1C723F112E9004AED4B /* Assets.xcassets */,
 				6E28A1EE23F12376004AED4B /* Main.storyboard */,
 				6E28A1C923F112E9004AED4B /* LaunchScreen.storyboard */,
+				6E89852723F2765300071B31 /* GoogleService-Info.plist */,
 				6E28A1CC23F112E9004AED4B /* Info.plist */,
-				6ED756FC23F1C6F9002CD6F9 /* GoogleService-Info.plist */,
 				6E28A1C423F112E6004AED4B /* Helaka_Cobscomp182p_015.xcdatamodeld */,
 			);
 			path = "Helaka-Cobscomp182p-015";
@@ -291,7 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E28A1EF23F12376004AED4B /* Main.storyboard in Resources */,
-				6ED756FD23F1C6F9002CD6F9 /* GoogleService-Info.plist in Resources */,
+				6E89852823F2765300071B31 /* GoogleService-Info.plist in Resources */,
 				6E28A1CB23F112E9004AED4B /* LaunchScreen.storyboard in Resources */,
 				6E28A1C823F112E9004AED4B /* Assets.xcassets in Resources */,
 			);

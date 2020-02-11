@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>509267663234-nqff2qvoqjavu0n07586qmf92gvdqft0.apps.googleusercontent.com</string>
+	<string>99973956560-l75v6v0ljugkrkr2eo5gsaqh46lodnlr.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.509267663234-nqff2qvoqjavu0n07586qmf92gvdqft0</string>
+	<string>com.googleusercontent.apps.99973956560-l75v6v0ljugkrkr2eo5gsaqh46lodnlr</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAOrKcMsP_DtBgAtRmyutx0-sKx9oxfXJE</string>
+	<string>AIzaSyDSkZnex3jzFzEdwnqp8V7CIiy5bHn9Iw4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>509267663234</string>
+	<string>99973956560</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.Helaka.Testing</string>
+	<string>com.helaka-Helaka-Cobscomp182p-015</string>
 	<key>PROJECT_ID</key>
-	<string>ios-hbo-859bd</string>
+	<string>event-app-93d34</string>
 	<key>STORAGE_BUCKET</key>
-	<string>ios-hbo-859bd.appspot.com</string>
+	<string>event-app-93d34.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:509267663234:ios:266f4d025cb8332923179b</string>
+	<string>1:99973956560:ios:eb963583a76a1fd980efd5</string>
 	<key>DATABASE_URL</key>
-	<string>https://ios-hbo-859bd.firebaseio.com</string>
+	<string>https://event-app-93d34.firebaseio.com</string>
 </dict>
 </plist>
