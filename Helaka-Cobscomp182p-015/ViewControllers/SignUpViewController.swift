@@ -141,4 +141,23 @@ class SignUpViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
+    
+//    func passwordReset(email: String, onSuccess: @escaping()->Void, onError: @escaping(_
+//        errorMessage: String)-> Void){
+//        
+//        let resetEmailText = resetEmailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+//        
+//        Auth.auth().sendPasswordReset(withEmail: resetEmailText) { (error) in
+//            
+//            if error == nil{
+//                
+//                onSuccess()
+//            }else{
+//                
+//                onError(error!.localizedDescription)
+//            }
+//        }
+//        
+//    }
+    
 }
