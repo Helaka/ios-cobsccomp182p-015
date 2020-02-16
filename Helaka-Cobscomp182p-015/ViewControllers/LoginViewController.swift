@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import LocalAuthentication
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
@@ -21,6 +22,7 @@ class LoginViewController: UIViewController {
 
         
         errorLabel.alpha = 0
+        handleFaceIdTouchId()
         // Do any additional setup after loading the view.
     }
     
@@ -65,4 +67,24 @@ class LoginViewController: UIViewController {
     }
     */
 
+    @objc fileprivate func handleFaceIdTouchId(){
+        
+        let context = LAContext()
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an access to NIBM Events we need to check your faceId/TouchID") { (wasSuccessful, error) in
+                if wasSuccessful{
+                    
+                    self.dismiss(animated: true, completion:nil)
+                    
+                    
+                }else{
+                    Alert.showBasics(title: "Incorrect credentials", msg: "Please try again", vc: self)
+                }
+            }
+            
+        }else{
+            Alert.showBasics(title: "FaceID/TouchID is not configured", msg: "Please go to settings", vc: self)
+        }
+    }
 }

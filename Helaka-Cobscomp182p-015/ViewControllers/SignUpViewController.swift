@@ -137,7 +137,7 @@ class SignUpViewController: UIViewController {
     
     func redirectToHomeController(){
         
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") 
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainTabViewController")
         self.present(vc, animated: true, completion: nil)
     }
     
