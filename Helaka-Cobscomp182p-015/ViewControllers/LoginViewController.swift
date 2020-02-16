@@ -54,8 +54,14 @@ class LoginViewController: UIViewController {
     
     func redirectToHomeController(){
         
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController")
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarControllerIdentifier")
         self.present(vc, animated: true, completion: nil)
+        
+        
+//        let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarControllerIdentifier")
+//        if let navigator = self.navigationController {
+//            navigator.pushViewController(tabBarController, animated: true)
+//        }
     }
     /*
     // MARK: - Navigation

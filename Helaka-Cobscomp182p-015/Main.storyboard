@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jp0-zv-Dro">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QU1-hD-IIp">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -126,7 +126,7 @@
         <!--Password Reset View Controller-->
         <scene sceneID="VLE-Aa-mc6">
             <objects>
-                <viewController id="0wI-b6-caO" customClass="PasswordResetViewController" customModule="Helaka_Cobscomp182p_015" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="psswordReset" id="0wI-b6-caO" customClass="PasswordResetViewController" customModule="Helaka_Cobscomp182p_015" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QzR-Lg-4Tq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -332,21 +332,32 @@
             </objects>
             <point key="canvasLocation" x="1637.68115942029" y="732.58928571428567"/>
         </scene>
-        <!--Main Tab View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="zKQ-UO-SAS">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="9dd-MV-7GJ" customClass="MainTabViewController" customModule="Helaka_Cobscomp182p_015" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="9dd-MV-7GJ" customClass="ProfileViewController" customModule="Helaka_Cobscomp182p_015" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iM1-X9-AyF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="fea-mL-zN5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fea-mL-zN5" firstAttribute="leading" secondItem="q5Q-Ky-drk" secondAttribute="leading" id="IBb-0H-Irz"/>
+                            <constraint firstItem="fea-mL-zN5" firstAttribute="top" secondItem="iM1-X9-AyF" secondAttribute="top" id="OxZ-wa-NbS"/>
+                            <constraint firstAttribute="bottom" secondItem="fea-mL-zN5" secondAttribute="bottom" id="sXe-in-YwZ"/>
+                            <constraint firstItem="fea-mL-zN5" firstAttribute="trailing" secondItem="q5Q-Ky-drk" secondAttribute="trailing" id="vnU-wL-2me"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="q5Q-Ky-drk"/>
                     </view>
                     <navigationItem key="navigationItem" id="2Xj-3g-0jc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X09-dT-TP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3331.884057971015" y="732.58928571428567"/>
+            <point key="canvasLocation" x="4418.840579710145" y="795.53571428571422"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2OP-8q-OLQ">
@@ -416,10 +427,11 @@
             </objects>
             <point key="canvasLocation" x="1639.1304347826087" y="-27.455357142857142"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Profile-->
         <scene sceneID="UqG-ZA-pdd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jp0-zv-Dro" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="user" id="njW-e6-pba"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I3m-HB-W0m">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -432,10 +444,76 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uun-1k-GAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2421.739130434783" y="732.58928571428567"/>
+            <point key="canvasLocation" x="3272" y="796"/>
+        </scene>
+        <!--Add Event-->
+        <scene sceneID="ojk-3X-3Vq">
+            <objects>
+                <viewController id="Z4q-Qs-Jux" customClass="AddEventViewController" customModule="Helaka_Cobscomp182p_015" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k3G-eL-d0W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="g2m-eI-pzz"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add Event" image="add" id="9gr-jG-PwE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NTq-z5-DbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1316" y="2470"/>
+        </scene>
+        <!--Events-->
+        <scene sceneID="HZO-v4-hGy">
+            <objects>
+                <viewController storyboardIdentifier="eventView" id="4tF-S8-RIJ" customClass="EventsViewController" customModule="Helaka_Cobscomp182p_015" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DpJ-A0-KLC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4GZ-SL-8O5">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4GZ-SL-8O5" firstAttribute="centerX" secondItem="DpJ-A0-KLC" secondAttribute="centerX" id="AvX-PU-4AT"/>
+                            <constraint firstItem="4GZ-SL-8O5" firstAttribute="centerY" secondItem="DpJ-A0-KLC" secondAttribute="centerY" id="uUW-mp-J6y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NYJ-tN-Rq9"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Events" image="event" id="3ET-gY-3cM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BCx-3z-3Jt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3073.913043478261" y="2469.6428571428569"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="bZk-kM-0pq">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBarControllerIdentifier" id="QU1-hD-IIp" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="02b-6H-2AX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4tF-S8-RIJ" kind="relationship" relationship="viewControllers" id="Eii-FP-H7H"/>
+                        <segue destination="Z4q-Qs-Jux" kind="relationship" relationship="viewControllers" id="nFD-Ol-J39"/>
+                        <segue destination="jp0-zv-Dro" kind="relationship" relationship="viewControllers" id="FWZ-ha-fCb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epN-20-AP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2455" y="1728"/>
         </scene>
     </scenes>
     <resources>
         <image name="Background" width="145.5" height="255.5"/>
+        <image name="add" width="30" height="30"/>
+        <image name="event" width="30" height="30"/>
+        <image name="user" width="30" height="30"/>
     </resources>
 </document>

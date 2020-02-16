@@ -27,7 +27,12 @@ class ProfileViewController: UIViewController {
         
         do{
             try Auth.auth().signOut()
-            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController")
+//            let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarControllerIdentifier")
+//            if let navigator = self.navigationController {
+//                navigator.pushViewController(tabBarController, animated: true)
+//            }
+            
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarControllerIdentifier")
             self.present(vc, animated: true, completion: nil)
         }catch let err{
             
