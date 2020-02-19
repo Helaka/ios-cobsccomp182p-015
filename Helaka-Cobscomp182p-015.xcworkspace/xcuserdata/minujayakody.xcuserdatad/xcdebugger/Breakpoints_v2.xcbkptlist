@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/AppDelegate.swift"
-            timestampString = "603775721.324752"
+            timestampString = "603798049.612092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/AppDelegate.swift"
-            timestampString = "603775721.324825"
+            timestampString = "603798049.612157"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/ViewControllers/SignUpViewController.swift"
-            timestampString = "603775721.324954"
+            timestampString = "603830856.4528379"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "131"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/ViewControllers/SignUpViewController.swift"
-            timestampString = "603775721.325309"
+            timestampString = "603830856.452937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "121"
@@ -143,6 +143,86 @@
                   startingLineNumber = "123"
                   endingLineNumber = "123"
                   offsetFromSymbolStart = "531">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Helaka-Cobscomp182p-015/TabController/CurrentUser.swift"
+            timestampString = "603813729.274326"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "init(uid:dictionary:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Helaka-Cobscomp182p-015/TabController/ProfileViewController.swift"
+            timestampString = "603830856.4530669"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
+            landmarkName = "retriveUserData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Helaka-Cobscomp182p-015/TabController/ProfileViewController.swift"
+            timestampString = "603830856.453606"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "retriveUserData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Helaka_Cobscomp182p_015.ProfileViewController.retriveUserData() -&gt; ()"
+                  moduleName = "Helaka-Cobscomp182p-015"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minujayakody/Desktop/Helaka-cobsccomp182-015/Helaka-Cobscomp182p-015/Helaka-Cobscomp182p-015/TabController/ProfileViewController.swift"
+                  timestampString = "603827905.8893321"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "1180">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Helaka_Cobscomp182p_015.ProfileViewController.retriveUserData() -&gt; ()"
+                  moduleName = "Helaka-Cobscomp182p-015"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minujayakody/Desktop/Helaka-cobsccomp182-015/Helaka-Cobscomp182p-015/Helaka-Cobscomp182p-015/TabController/ProfileViewController.swift"
+                  timestampString = "603827905.8908139"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "190">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -25,6 +25,7 @@
 		6E8B29D523F834DF00CFAFC5 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B29D423F834DF00CFAFC5 /* AddEventViewController.swift */; };
 		6E8B29D723F834F300CFAFC5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B29D623F834F300CFAFC5 /* ProfileViewController.swift */; };
 		6E93A2D823F1E24D00F879DB /* signUpValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E93A2D723F1E24D00F879DB /* signUpValidation.swift */; };
+		6E94D59223FCF83500682A3B /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E94D59123FCF83500682A3B /* CurrentUser.swift */; };
 		F8297C25676DDA6F1296DECA /* Pods_Helaka_Cobscomp182p_015.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8720DA8CF13DA3381BBC14BD /* Pods_Helaka_Cobscomp182p_015.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		6E8B29D423F834DF00CFAFC5 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		6E8B29D623F834F300CFAFC5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6E93A2D723F1E24D00F879DB /* signUpValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpValidation.swift; sourceTree = "<group>"; };
+		6E94D59123FCF83500682A3B /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		8720DA8CF13DA3381BBC14BD /* Pods_Helaka_Cobscomp182p_015.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Helaka_Cobscomp182p_015.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8DD6E6C33CBB4A6AD937DF5 /* Pods-Helaka-Cobscomp182p-015.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Helaka-Cobscomp182p-015.release.xcconfig"; path = "Target Support Files/Pods-Helaka-Cobscomp182p-015/Pods-Helaka-Cobscomp182p-015.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,6 +205,7 @@
 				6E8B29D423F834DF00CFAFC5 /* AddEventViewController.swift */,
 				6E8B29D223F834AD00CFAFC5 /* EventsViewController.swift */,
 				6E8B29D623F834F300CFAFC5 /* ProfileViewController.swift */,
+				6E94D59123FCF83500682A3B /* CurrentUser.swift */,
 			);
 			path = TabController;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				6E8B29D723F834F300CFAFC5 /* ProfileViewController.swift in Sources */,
 				6E699F2723F4FE0900B9AB1B /* Alerts.swift in Sources */,
 				6E28A1BE23F112E6004AED4B /* AppDelegate.swift in Sources */,
+				6E94D59223FCF83500682A3B /* CurrentUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

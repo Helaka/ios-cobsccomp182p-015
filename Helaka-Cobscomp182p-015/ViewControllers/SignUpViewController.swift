@@ -145,7 +145,7 @@ class SignUpViewController: UIViewController {
                         
                         if let metaImageUrl = url?.absoluteString{
                             
-                            database.collection("users").addDocument(data: ["firstname":fNameText, "lastname":lNameText, "email":emailText, "password":passwordText, "profileimageurl":metaImageUrl, "uid": result!.user.uid ])  { (error) in
+                            database.collection("users").document(result!.user.uid).setData(["firstname":fNameText, "lastname":lNameText, "email":emailText, "password":passwordText, "profileimageurl":metaImageUrl, "uid": result!.user.uid ])  { (error) in
                                 
                                 
                                 if error != nil {
@@ -199,7 +199,6 @@ class SignUpViewController: UIViewController {
 
 
 extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-    
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

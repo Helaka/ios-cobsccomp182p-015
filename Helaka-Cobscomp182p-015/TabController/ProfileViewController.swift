@@ -8,15 +8,22 @@
 
 import UIKit
 import FirebaseAuth
-import FirebaseStorage
 import FirebaseDatabase
+import FirebaseStorage
+import Firebase
+import Kingfisher
+
 
 class ProfileViewController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileimage: UIImageView!
+    @IBOutlet weak var usenameLabel: UILabel!
     
-    @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var userNameTextField: UILabel!
+    @IBOutlet weak var emailTextLabel: UILabel!
+    @IBOutlet weak var contactNumberLabel: UILabel!
+    
+//    @IBOutlet weak var saveButton: UIButton!
+//    @IBOutlet weak var userNameTextField: UILabel!
     
 //    let storageRef = Storage.storage().reference(forURL:"gs://event-app-93d34.appspot.com")
 //    let databaseRef = Database.database().reference()
@@ -28,7 +35,7 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
 
         // Do any additional setup after loading the view.
         
-        
+    
         
         checkLoggedInUserStatus()
         
@@ -37,24 +44,19 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
         navigationItem.title =  "Profile"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign out", style: .done, target: self, action: #selector(handleSignOutButtonTapped))
         
-        
-        
-        
+       
         
         
         
     }
+    
+  
     
     
     @objc func handleSignOutButtonTapped(){
         
         do{
             try Auth.auth().signOut()
-//            let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarControllerIdentifier")
-//            if let navigator = self.navigationController {
-//                navigator.pushViewController(tabBarController, animated: true)
-//            }
-            
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarControllerIdentifier")
             self.present(vc, animated: true, completion: nil)
         }catch let err{
@@ -66,142 +68,150 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
       
     }
     
-    
     fileprivate func checkLoggedInUserStatus(){
-        
-        
         if Auth.auth().currentUser == nil{
             
             DispatchQueue.main.async {
-                
-                
                 let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginView")
                 self.present(vc, animated: true, completion: nil)
                 
                 return
             }
         }else{
-            
         
+            retriveUserData()
         }
         
     }
-//
-//    func setupProfile(){
-//
-//          if Auth.auth().currentUser?.uid == nil{
-//
-//            checkLoggedInUserStatus()
-//
-//        }else{
-//            profileImage.layer.cornerRadius = profileImage.frame.size.width/2
-//            profileImage.clipsToBounds = true
-//
-//            let uid = Auth.auth().currentUser?.uid
-//            databaseRef.child("users").child(uid!).observeSingleEvent(of: .value) { (snapshot) in
-//
-//                if let dict = snapshot.value as? [String: AnyObject]{
-//
-//                    self.userNameTextField.text = dict["fistname"] as? String
-//                    if let profileImageURL = dict["pic"] as? String{
-//
-//                        let url = URL(string: profileImageURL)
-//                        URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
-//
-//                            if error != nil{
-//
-//                                print(error! )
-//                                return
-//
-//                            }
-//                            DispatchQueue.main.async {
-//                                self.profileImage?.image = UIImage(data: data!)
-//                            }
-//                        }).resume()
-//                    }
-//                }
-//            }
-//        }
-    
         
+    
+    
+    
+    
+    func retriveUserData(){
+//
+//
+//
+//
+//        if Auth.auth().currentUser != nil{
+//
+//
+                        guard let uid = Auth.auth().currentUser?.uid else{
+                            return
+                        }
+        
+        print(uid)
+//            ////
+//            //            Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+//            //
+//            //                guard let dict = snapshot.value as? [String : Any] else { return }
+//            //
+//            //                let user = CurrentUser(uid: uid, dictionary: dict)
+//            //
+//            //                self.usenameLabel.text = user.name
+//            //
+//            //            }) { (error) in
+//            //
+//            //                print(error)
+//            //            }
         
        
-//    }
+//
+//
+            let db = Firestore.firestore()
 
-//    @IBAction func saveButtonClick(_ sender: Any) {
-//
-//        saveChanges()
-//
-//    }
-    
-    
+            let docRef = db.collection("users").document(uid)
+        
+        print(docRef)
 
+            docRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                    print("Document data: \(dataDescription)")
+
+
+
+                     self.usenameLabel.text = (document.get("firstname") as! String)
+                     self.emailTextLabel.text = (document.get("email") as! String)
+                    let profile = (document.get("profileimageurl") as! String)
+                    self.profileimage.kf.setImage(with: URL(string: profile), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
+
+                } else {
+                    print("Document does not exist")
+                }
+
+//            docRef.collection("users").document(currentUser.uid)
+//                .getDocument { (snapshot, error ) in
+//
+//                    if let document = snapshot {
+//
+//                        let user = User.transformUser(dict: document.data()!, key: document.documentID)
+//                        completion(user)
+//
+//                    } else {
+//
+//                        print("Document does not exist")
+//
+//                    }
+//            }
+//            }
     
-    
-//    @IBAction func uploadImageButtonClick(_ sender: Any) {
-//
-//        let picker = UIImagePickerController()
-//        picker.delegate = self
-//        picker.allowsEditing = true
-//        picker.sourceType = .photoLibrary
-//        self.present(picker , animated: true , completion: nil)
-//    }
-//
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//
-//        var selectedImageFrontPicker: UIImage?
-//
-//        if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
-//
-//            selectedImageFrontPicker = editedImage
-//        }else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-//
-//            selectedImageFrontPicker = originalImage
+//        guard let currentUser = Auth.auth().currentUser else{
+//            return
 //        }
+        
+//        db.collection("users").document(currentUser.uid)
+//            .getDocument { (snapshot, error ) in
 //
-//        if let selectedImage = selectedImageFrontPicker {
+//                if let document = snapshot {
 //
-//            profileImage.image = selectedImage
-//        }
-//        dismiss(animated: true, completion: nil)
-//
-//    }
-    
-//    func saveChanges(){
+////                    let user = User.transformUser(dict: document.data()!, key: document.documentID)
+////                    completion(user)
+//                    self.usenameLabel.text =  (document.get("firstname") as! String)
+//                    self.emailTextLabel.text = (document.get("email") as! String)
 //
 //
-//        let imageName = NSUUID().uuidString
+//                } else {
 //
-//        let storedImage = storageRef.child("profile_images").child(imageName)
+//                    print("Document does not exist")
 //
-//        if let updatedData = (self.profileImage.image)!.pngData(){
-//
-//            storedImage.putData(updatedData, metadata: nil) { (metadata, error) in
-//                if error != nil {
-//                     print(error!)
-//                    return
 //                }
-//                storedImage.downloadURL(completion: { (url, error) in
+//        }
+    }
 //
-//                    if error != nil {
-//                        print(error)
-//                        return
+//
+//
+//
+    
+//    end of retrieveUserData
+    
+//
+//    func observeCurrentUser(completion: @escaping (User) -> Void) {
+//        guard let currentUser = Auth.auth().currentUser else {
+//            return
+//        }
+//                    let db = Firestore.firestore()
+//        //
+////        let docRef = db.collection("users").document("HbZm51TvFShpoXk8I3Li")
+//        if let userId = Auth.auth().currentUser?.uid {
+//            db.collection("users").document(currentUser.uid)
+//                .getDocument { (snapshot, error ) in
+//
+//                    if let document = snapshot {
+//
+////                        let user = User.transformUser(dict: document.data()!, key: document.documentID)
+////                        completion(user)
+//                        self.usenameLabel.text =  (document.get("firstname") as! String)
+//                        self.emailTextLabel.text = (document.get("email") as! String)
+//
+//                    } else {
+//
+//                        print("Document does not exist")
+//
 //                    }
-//                    if let urlText = url?.absoluteString{
-//
-//                        self.databaseRef.child("users").child(Auth.auth().currentUser!.uid).updateChildValues(["pic": urlText], withCompletionBlock: { (error, ref) in
-//
-//                            if error != nil {
-//
-//                                print(error!)
-//
-//                                return
-//                            }
-//                        })
-//                    }
-//                })
 //            }
 //        }
 //    }
-//
+    }
+    
 }
