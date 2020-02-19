@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Helaka-Cobscomp182p-015/AppDelegate.swift"
+            timestampString = "603775721.324752"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "applicationWillTerminate(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Helaka-Cobscomp182p-015/AppDelegate.swift"
+            timestampString = "603775721.324825"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "applicationWillTerminate(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Helaka-Cobscomp182p-015/ViewControllers/LoginViewController.swift"
+            timestampString = "603698578.488795"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "signin()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Helaka-Cobscomp182p-015/ViewControllers/SignUpViewController.swift"
+            timestampString = "603775721.324954"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "signUp()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Helaka_Cobscomp182p_015.SignUpViewController.signUp() -&gt; ()"
+                  moduleName = "Helaka-Cobscomp182p-015"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minujayakody/Desktop/Helaka-cobsccomp182-015/Helaka-Cobscomp182p-015/Helaka-Cobscomp182p-015/ViewControllers/SignUpViewController.swift"
+                  timestampString = "603773014.578441"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "905">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Helaka_Cobscomp182p_015.SignUpViewController.signUp() -&gt; ()"
+                  moduleName = "Helaka-Cobscomp182p-015"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minujayakody/Desktop/Helaka-cobsccomp182-015/Helaka-Cobscomp182p-015/Helaka-Cobscomp182p-015/ViewControllers/SignUpViewController.swift"
+                  timestampString = "603773014.581847"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "2266">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Helaka-Cobscomp182p-015/ViewControllers/SignUpViewController.swift"
+            timestampString = "603775721.325309"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "signUp()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Helaka_Cobscomp182p_015.SignUpViewController.signUp() -&gt; ()"
+                  moduleName = "Helaka-Cobscomp182p-015"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minujayakody/Desktop/Helaka-cobsccomp182-015/Helaka-Cobscomp182p-015/Helaka-Cobscomp182p-015/ViewControllers/SignUpViewController.swift"
+                  timestampString = "603775165.254364"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "3348">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Helaka_Cobscomp182p_015.SignUpViewController.signUp() -&gt; ()"
+                  moduleName = "Helaka-Cobscomp182p-015"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minujayakody/Desktop/Helaka-cobsccomp182-015/Helaka-Cobscomp182p-015/Helaka-Cobscomp182p-015/ViewControllers/SignUpViewController.swift"
+                  timestampString = "603775165.256238"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "531">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

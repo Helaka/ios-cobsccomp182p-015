@@ -28,4 +28,6 @@ class Validations{
         return emailPred.evaluate(with: email)
     }
     
+   
+    
 }

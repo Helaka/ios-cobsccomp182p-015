@@ -93,4 +93,16 @@ class LoginViewController: UIViewController {
             Alert.showBasics(title: "FaceID/TouchID is not configured", msg: "Please go to settings", vc: self)
         }
     }
+    
+    
+    @IBAction func signUpButtonClick(_ sender: Any) {
+        redirectToSignUpController()
+        
+    }
+    
+    
+    func redirectToSignUpController(){
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "signUpView")
+        self.present(vc, animated: true, completion: nil)
+    }
 }

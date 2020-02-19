@@ -21,7 +21,6 @@
 		6E699F2723F4FE0900B9AB1B /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E699F2623F4FE0900B9AB1B /* Alerts.swift */; };
 		6E89852623F25FF200071B31 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89852523F25FF200071B31 /* HomeViewController.swift */; };
 		6E89852823F2765300071B31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E89852723F2765300071B31 /* GoogleService-Info.plist */; };
-		6E8B29D123F833C400CFAFC5 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B29D023F833C400CFAFC5 /* MainTabViewController.swift */; };
 		6E8B29D323F834AD00CFAFC5 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B29D223F834AD00CFAFC5 /* EventsViewController.swift */; };
 		6E8B29D523F834DF00CFAFC5 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B29D423F834DF00CFAFC5 /* AddEventViewController.swift */; };
 		6E8B29D723F834F300CFAFC5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B29D623F834F300CFAFC5 /* ProfileViewController.swift */; };
@@ -68,7 +67,6 @@
 		6E699F2623F4FE0900B9AB1B /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		6E89852523F25FF200071B31 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6E89852723F2765300071B31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		6E8B29D023F833C400CFAFC5 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		6E8B29D223F834AD00CFAFC5 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		6E8B29D423F834DF00CFAFC5 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		6E8B29D623F834F300CFAFC5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -202,7 +200,6 @@
 		6E8B29CF23F8339F00CFAFC5 /* TabController */ = {
 			isa = PBXGroup;
 			children = (
-				6E8B29D023F833C400CFAFC5 /* MainTabViewController.swift */,
 				6E8B29D423F834DF00CFAFC5 /* AddEventViewController.swift */,
 				6E8B29D223F834AD00CFAFC5 /* EventsViewController.swift */,
 				6E8B29D623F834F300CFAFC5 /* ProfileViewController.swift */,
@@ -401,7 +398,6 @@
 				6E28A1C023F112E6004AED4B /* ViewController.swift in Sources */,
 				6E699F2223F3DA9000B9AB1B /* PasswordResetViewController.swift in Sources */,
 				6E28A1F323F1B0E3004AED4B /* SignUpViewController.swift in Sources */,
-				6E8B29D123F833C400CFAFC5 /* MainTabViewController.swift in Sources */,
 				6E93A2D823F1E24D00F879DB /* signUpValidation.swift in Sources */,
 				6E89852623F25FF200071B31 /* HomeViewController.swift in Sources */,
 				6E8B29D723F834F300CFAFC5 /* ProfileViewController.swift in Sources */,
