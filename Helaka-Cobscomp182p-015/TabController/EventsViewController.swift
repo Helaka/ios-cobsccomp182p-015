@@ -18,7 +18,9 @@ class EventsViewController: UIViewController {
         
         view.backgroundColor = UIColor.white
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title =  "Events"
+        navigationItem.title =  "Profile"
+  
+        
     }
     
     

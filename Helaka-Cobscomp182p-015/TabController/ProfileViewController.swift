@@ -89,35 +89,11 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
     
     
     func retriveUserData(){
-//
-//
-//
-//
-//        if Auth.auth().currentUser != nil{
-//
-//
-                        guard let uid = Auth.auth().currentUser?.uid else{
-                            return
-                        }
+
+    guard let uid = Auth.auth().currentUser?.uid else{ return }
         
-        print(uid)
-//            ////
-//            //            Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
-//            //
-//            //                guard let dict = snapshot.value as? [String : Any] else { return }
-//            //
-//            //                let user = CurrentUser(uid: uid, dictionary: dict)
-//            //
-//            //                self.usenameLabel.text = user.name
-//            //
-//            //            }) { (error) in
-//            //
-//            //                print(error)
-//            //            }
-        
-       
-//
-//
+      print(uid)
+
             let db = Firestore.firestore()
 
             let docRef = db.collection("users").document(uid)
@@ -139,46 +115,8 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
                 } else {
                     print("Document does not exist")
                 }
+        }
 
-//            docRef.collection("users").document(currentUser.uid)
-//                .getDocument { (snapshot, error ) in
-//
-//                    if let document = snapshot {
-//
-//                        let user = User.transformUser(dict: document.data()!, key: document.documentID)
-//                        completion(user)
-//
-//                    } else {
-//
-//                        print("Document does not exist")
-//
-//                    }
-//            }
-//            }
-    
-//        guard let currentUser = Auth.auth().currentUser else{
-//            return
-//        }
-        
-//        db.collection("users").document(currentUser.uid)
-//            .getDocument { (snapshot, error ) in
-//
-//                if let document = snapshot {
-//
-////                    let user = User.transformUser(dict: document.data()!, key: document.documentID)
-////                    completion(user)
-//                    self.usenameLabel.text =  (document.get("firstname") as! String)
-//                    self.emailTextLabel.text = (document.get("email") as! String)
-//
-//
-//                } else {
-//
-//                    print("Document does not exist")
-//
-//                }
-//        }
-    }
-//
 //
 //
 //

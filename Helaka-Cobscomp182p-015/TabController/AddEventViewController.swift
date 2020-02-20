@@ -11,18 +11,32 @@ import FirebaseAuth
 
 class AddEventViewController: UIViewController {
 
+    @IBOutlet weak var eventDateTextField: UITextField!
+    @IBOutlet weak var eventNameTextField: UITextField!
+    @IBOutlet weak var eventLocationTextField: UITextField!
+    @IBOutlet weak var eventDescriptionTextField: UITextField!
+    
+    @IBOutlet weak var eventOwnerTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
+        
+        
+         checkLoggedInUserStatus()
         view.backgroundColor = UIColor.white
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title =  "Add Events"
-        checkLoggedInUserStatus()
+       
   
     }
+   
     
+    @IBAction func addLocationButtonClick(_ sender: Any) {
+    }
     
    
     
