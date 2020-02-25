@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FirebaseAuth
+
 
 class EventsViewController: UIViewController {
 

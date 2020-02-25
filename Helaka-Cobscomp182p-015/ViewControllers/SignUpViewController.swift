@@ -20,6 +20,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     
     var image: UIImage? = nil
+    let dGroup = DispatchGroup()
 
     @IBOutlet weak var profileImage: UIImageView!
     
@@ -34,6 +35,8 @@ class SignUpViewController: UIViewController {
         setUpProfileImage()
         
     }
+    
+
     
 //    Text Field Validations
     
@@ -107,6 +110,8 @@ class SignUpViewController: UIViewController {
         
         let passwordText = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
+        
+        
         guard let imageSelected = self.image else{
             
             print("profile image nil")
@@ -144,7 +149,6 @@ class SignUpViewController: UIViewController {
                     storageProfileRef.downloadURL(completion: { (url, error) in
                         
                         if let metaImageUrl = url?.absoluteString{
-                            
                             database.collection("users").document(result!.user.uid).setData(["firstname":fNameText, "lastname":lNameText, "email":emailText, "password":passwordText, "profileimageurl":metaImageUrl, "uid": result!.user.uid ])  { (error) in
                                 
                                 
@@ -160,6 +164,9 @@ class SignUpViewController: UIViewController {
                     
                     
                 })
+                
+                
+                
                 
                 
                 

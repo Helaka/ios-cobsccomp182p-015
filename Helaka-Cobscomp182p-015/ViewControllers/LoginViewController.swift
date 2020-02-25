@@ -22,7 +22,8 @@ class LoginViewController: UIViewController {
 
         
         errorLabel.alpha = 0
-        handleFaceIdTouchId()
+//        handleFaceIdTouchId()
+        authenticationWithTouchID()
         // Do any additional setup after loading the view.
     }
     
@@ -47,6 +48,7 @@ class LoginViewController: UIViewController {
                 self.errorLabel.alpha = 1
             }else{
                 self.redirectToHomeController()
+//                self.handleFaceIdTouchId()
             }
             
         }
@@ -72,25 +74,41 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-    @objc fileprivate func handleFaceIdTouchId(){
+    func authenticationWithTouchID() {
+        let localAuthenticationContext = LAContext()
+        localAuthenticationContext.localizedFallbackTitle = "Please use your Passcode"
         
-        let context = LAContext()
+        var authorizationError: NSError?
+        let reason = "Authentication required to access the secure data"
         
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an access to NIBM Events we need to check your faceId/TouchID") { (wasSuccessful, error) in
-                if wasSuccessful{
+        if localAuthenticationContext.canEvaluatePolicy(.deviceOwnerAuthentication, error: &authorizationError) {
+            
+            localAuthenticationContext.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) { success, evaluateError in
+                
+                if success {
+                    DispatchQueue.main.async() {
+                        let alert = UIAlertController(title: "Success", message: "Authenticated succesfully!", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                        
+                        self.signin()
+                    }
                     
-                    self.dismiss(animated: true, completion:nil)
+                } else {
+                    // Failed to authenticate
+                    guard let error = evaluateError else {
+                        return
+                    }
+                    print(error)
                     
-                    
-                }else{
-                    Alert.showBasics(title: "Incorrect credentials", msg: "Please try again", vc: self)
                 }
             }
+        } else {
             
-        }else{
-            Alert.showBasics(title: "FaceID/TouchID is not configured", msg: "Please go to settings", vc: self)
+            guard let error = authorizationError else {
+                return
+            }
+            print(error)
         }
     }
     

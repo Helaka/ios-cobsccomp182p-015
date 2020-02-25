@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '9.0'
 
 target 'Helaka-Cobscomp182p-015' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -16,6 +16,11 @@ pod 'Firebase/Firestore'
 pod 'Firebase/Storage'
 pod 'Firebase/Database'
 pod 'Kingfisher', '~> 5.0'
+pod 'GooglePlacesSearchController' 
+pod 'GooglePlaces'
+pod 'GooglePlacePicker'
+pod 'GoogleMaps'
+
 
 
 end

@@ -8,10 +8,10 @@
 
 import UIKit
 import FirebaseAuth
-import FirebaseDatabase
 import FirebaseStorage
 import Firebase
 import Kingfisher
+import LocalAuthentication
 
 
 class ProfileViewController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -39,6 +39,8 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
         
         checkLoggedInUserStatus()
         
+//         handleFaceIdTouchIhandleFaceIdTouchIdd()
+        
         view.backgroundColor = UIColor.white
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title =  "Profile"
@@ -50,7 +52,30 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
         
     }
     
-  
+    
+    
+//
+//    @objc fileprivate func handleFaceIdTouchId(){
+//
+//        let context = LAContext()
+//
+//        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
+//            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an access to NIBM Events we need to check your faceId/TouchID") { (wasSuccessful, error) in
+//                if wasSuccessful{
+//
+//                    self.dismiss(animated: true, completion:nil)
+//
+//
+//                }else{
+//                    Alert.showBasics(title: "Incorrect credentials", msg: "Please try again", vc: self)
+//                }
+//            }
+//
+//        }else{
+//            Alert.showBasics(title: "FaceID/TouchID is not configured", msg: "Please go to settings", vc: self)
+//        }
+//    }
+//
     
     
     @objc func handleSignOutButtonTapped(){
@@ -59,6 +84,7 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
             try Auth.auth().signOut()
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarControllerIdentifier")
             self.present(vc, animated: true, completion: nil)
+          
         }catch let err{
             
             print("Failed to sign out with error",err)
@@ -119,7 +145,7 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
 
 //
 //
-//
+//handleFaceIdTouchId
     
 //    end of retrieveUserData
     
