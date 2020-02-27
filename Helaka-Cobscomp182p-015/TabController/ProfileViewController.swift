@@ -143,39 +143,6 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
                 }
         }
 
-//
-//
-//handleFaceIdTouchId
-    
-//    end of retrieveUserData
-    
-//
-//    func observeCurrentUser(completion: @escaping (User) -> Void) {
-//        guard let currentUser = Auth.auth().currentUser else {
-//            return
-//        }
-//                    let db = Firestore.firestore()
-//        //
-////        let docRef = db.collection("users").document("HbZm51TvFShpoXk8I3Li")
-//        if let userId = Auth.auth().currentUser?.uid {
-//            db.collection("users").document(currentUser.uid)
-//                .getDocument { (snapshot, error ) in
-//
-//                    if let document = snapshot {
-//
-////                        let user = User.transformUser(dict: document.data()!, key: document.documentID)
-////                        completion(user)
-//                        self.usenameLabel.text =  (document.get("firstname") as! String)
-//                        self.emailTextLabel.text = (document.get("email") as! String)
-//
-//                    } else {
-//
-//                        print("Document does not exist")
-//
-//                    }
-//            }
-//        }
-//    }
     }
     
 }

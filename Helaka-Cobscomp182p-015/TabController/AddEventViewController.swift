@@ -215,7 +215,7 @@ class AddEventViewController: UIViewController ,UIImagePickerControllerDelegate,
                 print(error?.localizedDescription)
                 return
             }
-            
+
             storageProfileRef.downloadURL(completion: { (url, error) in
                 
                 if let metaImageUrl = url?.absoluteString{
@@ -238,28 +238,29 @@ class AddEventViewController: UIViewController ,UIImagePickerControllerDelegate,
                 }
                 
             })
-            
+           
         }
         
         
-        database.collection("Events").document().setData(["eventname":eventName , "eventdate": eventDate , "eventDescription": eventDescription, "ownername": eventOwnerName , "eventlocation": eventLocation ]) { (error) in
-            
-            
-            if error != nil {
-                
-                self.showErrorMessage("Error when creating Event")
-            }else{
-                
-                self.redirectToHomeController()
-            }
-            
-        
-            
-        }
+//        database.collection("Events").document().setData(["eventname":eventName , "eventdate": eventDate , "eventDescription": eventDescription, "ownername": eventOwnerName , "eventlocation": eventLocation, "EventImageurl":metaImageUrl ]) { (error) in
+//
+//
+//            if error != nil {
+//
+//                self.showErrorMessage("Error when creating Event")
+//            }else{
+//
+//                self.redirectToHomeController()
+//            }
+//
+//
+//
+//        }
         
     }
     
-   
+    
+    
     
     fileprivate func checkLoggedInUserStatus(){
         
