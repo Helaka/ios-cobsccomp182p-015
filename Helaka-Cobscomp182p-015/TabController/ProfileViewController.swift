@@ -79,6 +79,12 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
     
     
     @objc func handleSignOutButtonTapped(){
+
+
+        UserDefaults.standard.removeObject(forKey: "userLogIn")
+        UserDefaults.standard.removeObject(forKey: "userId")
+        UserDefaults.standard.removeObject(forKey: "userLogged")
+        UserDefaults.standard.synchronize()
         
         do{
             try Auth.auth().signOut()

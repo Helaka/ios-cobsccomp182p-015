@@ -29,7 +29,8 @@ class AddEventViewController: UIViewController ,UIImagePickerControllerDelegate,
     @IBOutlet weak var eventDescriptionTextField: UITextField!
     @IBOutlet weak var eventOwnerTextField: UITextField!
     
-//    @IBOutlet weak var imageButton: UIButton!
+    @IBOutlet weak var ownersId: UITextField!
+    //    @IBOutlet weak var imageButton: UIButton!
 //    @IBOutlet weak var imageButton: UIButton!
     
     @IBOutlet weak var eventImageView: UIImageView!
@@ -103,6 +104,9 @@ class AddEventViewController: UIViewController ,UIImagePickerControllerDelegate,
         self.present(actionSheet, animated: true , completion: nil)
     }
     
+    
+    
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 //        let imageSelected = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
 //
@@ -128,9 +132,15 @@ class AddEventViewController: UIViewController ,UIImagePickerControllerDelegate,
         picker.dismiss(animated: true, completion: nil)
     }
     
+    
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
+    
+    
+    
+    
     func validateTextFields() -> String? {
         
         
@@ -193,6 +203,8 @@ class AddEventViewController: UIViewController ,UIImagePickerControllerDelegate,
         
         let eventLocation =  eventLocationTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
+        let ownerId =  ownersId.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
         let metadata = StorageMetadata()
         
         let database  = Firestore.firestore()
@@ -219,7 +231,7 @@ class AddEventViewController: UIViewController ,UIImagePickerControllerDelegate,
             storageProfileRef.downloadURL(completion: { (url, error) in
                 
                 if let metaImageUrl = url?.absoluteString{
-                    database.collection("Events").document().setData(["eventname":eventName , "eventdate": eventDate , "eventDescription": eventDescription, "ownername": eventOwnerName , "eventlocation": eventLocation,"EventImageurl":metaImageUrl ]) { (error) in
+                    database.collection("Events").document(eventName).setData(["eventname":eventName , "eventdate": eventDate , "eventDescription": eventDescription, "ownername": eventOwnerName , "eventlocation": eventLocation,"EventImageurl":metaImageUrl , "ownerID" : ownerId ]) { (error) in
                         
                         
                         if error != nil {
@@ -290,21 +302,23 @@ class AddEventViewController: UIViewController ,UIImagePickerControllerDelegate,
         
         let docRef = db.collection("users").document(uid)
         
-        
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
                 print("Document data: \(dataDescription)")
                 
                 
-                
                 self.eventOwnerTextField.text = (document.get("firstname") as! String)
+                
+                self.ownersId.text = (document.get("uid") as! String)
                 
                 self.eventOwnerTextField.isUserInteractionEnabled = false
                 
+                self.ownersId.isUserInteractionEnabled = false
+                
             } else {
                 print("Document does not exist")
-            }
+        }
     }
 
     }

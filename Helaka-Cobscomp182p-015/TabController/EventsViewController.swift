@@ -22,6 +22,14 @@ struct Eventss {
     
     var imageurl : String
     
+    var description : String
+    
+    var location : String
+    
+    var ownername : String
+    
+    var ownerid : String
+    
 }
 
 
@@ -39,7 +47,7 @@ class EventsViewController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
        getAllData()
-//        checkLoggedInUserStatus()
+
   }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,12 +58,10 @@ class EventsViewController: UITableViewController{
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        
-        return 150
+        return 300
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
         
         return 1
     }
@@ -65,23 +71,34 @@ class EventsViewController: UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell") as!
         EventCell
         
-            cell.eventName.text =  eventsArray[indexPath.row].eventname
+        cell.eventName.text =  eventsArray[indexPath.row].eventname
         cell.eventDate.text = eventsArray[indexPath.row].eventdate
+        cell.eventLocation.text = eventsArray[indexPath.row].location
+        cell.ownerDescription.text = eventsArray[indexPath.row].description
+        cell.ownerName.text = eventsArray[indexPath.row].ownername
+        cell.ownerId.text = eventsArray[indexPath.row].ownerid
         
+        let imagesURLS = URL(string: eventsArray[indexPath.row].imageurl)
+        let eventimages = cell.EventImageView.kf.setImage(with: imagesURLS)
         
-//            cell.etext = eventsArray[indexPath.row].description
-        
-        
-        let imageut = URL(string: eventsArray[indexPath.row].imageurl)
-        cell.EventImageView.kf.setImage(with: imageut)
-        
-//        cell.EventImageView.image =  UIImage[eventsArray[indexPath.row].imageurl]
-        
-   
-            
-        
-//            cell.EventImageView.kf.setImage(with: )
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "eventDetail") as? DetailEventViewController
+      
+   
+        vc?.date = eventsArray[indexPath.row].eventdate
+        vc?.name = eventsArray[indexPath.row].eventname
+        vc?.descriptionn = eventsArray[indexPath.row].description
+        vc?.location = eventsArray[indexPath.row].location
+        vc?.ownernamee = eventsArray[indexPath.row].ownername
+        
+        
+        
+        
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     func getAllData(){
@@ -98,6 +115,13 @@ class EventsViewController: UITableViewController{
                     
                     let Eventdate = document.data()["eventdate"] as? String
                     
+                    let eventDescription = document.data()["eventDescription"] as? String
+                    
+                    let eventLocation = document.data()["eventlocation"] as! String
+                
+                    let ownerName = document.data()["ownername"] as! String
+                    
+                    let ownerId = document.data()["ownerID"] as! String
                     
                     let imageurll =  document.data()["EventImageurl"] as? String
                     
@@ -111,7 +135,7 @@ class EventsViewController: UITableViewController{
 //
 //                    let image = UIImage(data: imageData)
                     
-                    let events = Eventss(eventname: eventname!, eventdate: Eventdate!, imageurl: imageurll!)
+                    let events = Eventss(eventname: eventname!, eventdate: Eventdate!, imageurl: imageurll!, description: eventDescription!, location:eventLocation, ownername: ownerName, ownerid: ownerId)
                     
                     self.eventsArray.append(events)
                     

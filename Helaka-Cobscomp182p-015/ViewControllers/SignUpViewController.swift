@@ -165,13 +165,6 @@ class SignUpViewController: UIViewController {
                     
                 })
                 
-                
-                
-                
-                
-                
-               
-                
                 self.redirectToHomeController()
                 
             }

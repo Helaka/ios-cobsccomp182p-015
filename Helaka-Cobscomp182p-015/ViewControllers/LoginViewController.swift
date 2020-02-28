@@ -47,6 +47,20 @@ class LoginViewController: UIViewController {
                 self.errorLabel.text = error!.localizedDescription
                 self.errorLabel.alpha = 1
             }else{
+                
+                var userEmail:String?
+                var uID: String?
+                if let user = result {
+                    
+                    userEmail = user.user.email
+                    uID = user.user.uid
+                   
+                    UserDefaults.standard.set(userEmail, forKey: "userLogIn")
+                    UserDefaults.standard.set(uID, forKey: "userId")
+                    UserDefaults.standard.set(true, forKey: "userLogged")
+                    UserDefaults.standard.synchronize()
+                }
+                
                 self.redirectToHomeController()
 //                self.handleFaceIdTouchId()
             }

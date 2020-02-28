@@ -13,15 +13,34 @@ class EventCell: UITableViewCell {
     @IBOutlet weak var EventImageView: UIImageView!
     @IBOutlet weak var eventName: UILabel!
     // Configure the view for the selected state
-    @IBOutlet weak var eventDescription: UILabel!
     
+    @IBOutlet weak var ownerName: UILabel!
+    @IBOutlet weak var eventLocation: UILabel!
+    
+    @IBOutlet weak var ownerId: UILabel!
     @IBOutlet weak var eventDate: UILabel!
     
-//    func setEvent(event: Event){
+    @IBOutlet weak var ownerDescription: UILabel!
+    
+    
+    //    func setEvent(event: Event){
 //        
 //        EventImageView.image = event.image
 //        eventName.text = event.eventname
 //    }
+    
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+              EventImageView.layer.cornerRadius = 10
+    }
+    
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
     
 
 }
