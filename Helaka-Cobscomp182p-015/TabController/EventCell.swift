@@ -14,6 +14,7 @@ class EventCell: UITableViewCell {
     @IBOutlet weak var eventName: UILabel!
     // Configure the view for the selected state
     
+    @IBOutlet weak var EventdetailsView: UIView!
     @IBOutlet weak var ownerName: UILabel!
     @IBOutlet weak var eventLocation: UILabel!
     
@@ -34,7 +35,8 @@ class EventCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-              EventImageView.layer.cornerRadius = 10
+              EventImageView.layer.cornerRadius = 9
+        EventdetailsView.layer.cornerRadius = 12
     }
     
     

@@ -27,26 +27,16 @@ class DetailEventViewController: UIViewController {
 
     @IBOutlet weak var editView: UIView!
     
+    @IBOutlet weak var OwnerDeatilsView: UIView!
+    
+    @IBOutlet weak var EventdetailsScrollview: UIScrollView!
+    
+    @IBOutlet weak var OwnerProfileimage: UIImageView!
+    
+    @IBOutlet weak var goingButton: UIButton!
+    
  
-    
-    
-//   EVENT EDIT
-    
-    
-    @IBOutlet weak var eventEditImage: UIImageView!
-    @IBOutlet weak var eventNameEdit: UITextField!
-    
-    @IBOutlet weak var eventDescEdit: UITextField!
-    
-    @IBOutlet weak var eventEditDate: UITextField!
-    
-    @IBOutlet weak var eventLocationEdit: UITextField!
-    
-    
-    @IBOutlet weak var editEventErrLbl: UILabel!
-    
     var image = UIImage()
-    
     var loggedInUser = ""
     
     var date = ""
@@ -54,60 +44,64 @@ class DetailEventViewController: UIViewController {
     var ownernamee = ""
     var descriptionn = ""
     var location = ""
+    var imageURl = ""
+    
+   var eventname = ""
+   var eventlocation = ""
+   var eventdescription = ""
+   var eventdate = ""
   
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        OwnerDeatilsView.layer.cornerRadius = 20
+        EventdetailsScrollview.layer.cornerRadius = 30
+        goingButton.layer.cornerRadius = 15
+        OwnerProfileimage.layer.cornerRadius = OwnerProfileimage.frame.size.width/2
+        
+        
+        
         eventDate.text = "\(date)"
         eventName.text = "\(name)"
-        eventImageView.image = image
         eventDescription.text = "\(descriptionn)"
         eventLocation.text = "\(location)"
         ownername.text = "\(ownernamee)"
         
+        let imagesURLS = URL(string: "\(imageURl)")
+        eventImageView.kf.setImage(with: imagesURLS)
         
-        editView.alpha = 0
-        
-        editEventErrLbl.alpha = 0
-
-        // Do any additional setup after loading the view.
         
         retriveUserData()
         checkLoggedInUserStatus()
         
     }
     
-
-    @IBAction func editEventButtonClick(_ sender: Any) {
+    @IBAction func editButtonCLick(_ sender: Any) {
         
-        updateEvent()
+        
+        eventname = eventName.text!
+        eventlocation = eventLocation.text!
+        eventdate = eventDate.text!
+        eventdescription = eventDescription.text!
+        
+        performSegue(withIdentifier: "eventeditname", sender: self)
     }
     
     
-    
-    @IBAction func editPostButtonClick(_ sender: Any) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        let vc = segue.destination as! EditEventViewController
+        vc.finaleventname = self.eventname
+        vc.finaleventlocation = self.eventlocation
+        vc.finaleventdate = self.eventdate
+        vc.finaleventdescription = self.eventdescription
         
-//        eventLocationEdit.text = eventLocation.text
-//        eventEditDate.text = eventDate.text
-//        eventDescEdit.text = eventDescription.text
-//        eventNameEdit.text = eventName.text
-        
-        
-     editView.alpha = 1
+    }
     
     
-}
-    
-    
-        
-    
-    
-
     func retriveUserData(){
-        
-      
         
         guard let uid = Auth.auth().currentUser?.uid else{ return }
         
@@ -129,10 +123,9 @@ class DetailEventViewController: UIViewController {
                 if(self.loggedInUser == self.ownername.text){
                     
                     print("works")
-                    self.detailEditButton.alpha = 1
+
                 }else{
                     
-                    self.detailEditButton.alpha = 0
                 }
                 
                 
@@ -148,53 +141,12 @@ class DetailEventViewController: UIViewController {
     fileprivate func checkLoggedInUserStatus(){
         if Auth.auth().currentUser == nil{
             
-            detailEditButton.alpha = 0
+
             
         }else{
             
             retriveUserData()
         }
-        
-    }
-    
-    
-    
-    func updateEvent(){
-        
-        
-       
-        let EventNameEdit = eventNameEdit.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let EventDesctiptionEdit = eventDescEdit.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let EventDateEdit = eventEditDate.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let EventLocationEdit = eventLocationEdit.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let database = Firestore.firestore().collection("Events").document(eventName.text!)
-
-        
-        
-//        if !EventNameEdit.isEmpty || !EventDesctiptionEdit.isEmpty || !EventDateEdit.isEmpty || !EventLocationEdit.isEmpty {
-        
-            
-            database.updateData(["eventname": EventNameEdit,"eventDescription":EventDesctiptionEdit,
-                                 "eventDate":EventDateEdit , "eventLocation": EventLocationEdit]) { (err) in
-                                    
-                            if let err = err{
-                                        
-                                    print(err.localizedDescription)
-                                    }
-                                    
-                                
-            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarControllerIdentifier")
-                                    self.present(vc, animated: true, completion: nil)
-                            
-        }
-            
-           
-//        }
-        
-        
-
-        
-        
         
     }
     

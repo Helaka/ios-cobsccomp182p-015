@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/ViewControllers/SignUpViewController.swift"
-            timestampString = "604576203.938073"
+            timestampString = "604614892.012188"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "signUp()"
             landmarkType = "7">
             <Locations>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/ViewControllers/SignUpViewController.swift"
-            timestampString = "604576203.939751"
+            timestampString = "604614892.012256"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "signUp()"
             landmarkType = "7">
             <Locations>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/TabController/ProfileViewController.swift"
-            timestampString = "604576203.940662"
+            timestampString = "604646011.8777781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "retriveUserData()"
             landmarkType = "7">
             <Locations>
@@ -282,7 +282,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/TabController/AddEventViewController.swift"
-            timestampString = "604566741.619047"
+            timestampString = "604645886.4959919"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "addEventButtonClick(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Helaka-Cobscomp182p-015/TabController/AddEventViewController.swift"
+            timestampString = "604645886.496051"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "164"
@@ -298,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/TabController/AddEventViewController.swift"
-            timestampString = "604566741.619126"
+            timestampString = "604645886.496093"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "addEventButtonClick(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -314,27 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/TabController/AddEventViewController.swift"
-            timestampString = "604566741.619173"
+            timestampString = "604645886.49613"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
-            landmarkName = "addEventButtonClick(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Helaka-Cobscomp182p-015/TabController/AddEventViewController.swift"
-            timestampString = "604566741.61921"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "addEventButtonClick(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -346,7 +346,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/TabController/EventCell.swift"
-            timestampString = "604504786.2293"
+            timestampString = "604614892.01256"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "11"
@@ -439,7 +439,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/TabController/EventsViewController.swift"
-            timestampString = "604516808.49423"
+            timestampString = "604646011.8781739"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "72"
@@ -455,11 +455,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/TabController/EventsViewController.swift"
-            timestampString = "604516808.4943"
+            timestampString = "604646011.8782181"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "getAllData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -471,7 +471,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/TabController/EventsViewController.swift"
-            timestampString = "604516808.494366"
+            timestampString = "604646011.878255"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
@@ -487,7 +487,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/TabController/EventsViewController.swift"
-            timestampString = "604516808.494431"
+            timestampString = "604646011.8782901"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
@@ -503,11 +503,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/TabController/AddEventViewController.swift"
-            timestampString = "604566741.619319"
+            timestampString = "604645886.496322"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
+            startingLineNumber = "252"
+            endingLineNumber = "252"
             landmarkName = "AddEvent()"
             landmarkType = "7">
          </BreakpointContent>
@@ -519,11 +519,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/TabController/AddEventViewController.swift"
-            timestampString = "604566741.619365"
+            timestampString = "604645886.496356"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
             landmarkName = "AddEvent()"
             landmarkType = "7">
          </BreakpointContent>
@@ -615,7 +615,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/TabController/ProfileViewController.swift"
-            timestampString = "604576203.9410729"
+            timestampString = "604646011.878386"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "handleSignOutButtonTapped()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Helaka-Cobscomp182p-015/TabController/ProfileViewController.swift"
+            timestampString = "604646011.878589"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
@@ -631,7 +647,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/TabController/ProfileViewController.swift"
-            timestampString = "604576203.941117"
+            timestampString = "604646011.878792"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "85"
@@ -647,60 +663,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helaka-Cobscomp182p-015/TabController/ProfileViewController.swift"
-            timestampString = "604576203.941166"
+            timestampString = "604646011.8789999"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"
             endingLineNumber = "86"
             landmarkName = "handleSignOutButtonTapped()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Helaka-Cobscomp182p-015/TabController/ProfileViewController.swift"
-            timestampString = "604576203.941224"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "handleSignOutButtonTapped()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Helaka-Cobscomp182p-015/TabController/DetailEventViewController.swift"
-            timestampString = "604576203.941988"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
-            landmarkName = "updateEvent()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Helaka-Cobscomp182p-015/TabController/DetailEventViewController.swift"
-            timestampString = "604576203.942116"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
-            landmarkName = "updateEvent()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

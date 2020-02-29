@@ -58,7 +58,7 @@ class EventsViewController: UITableViewController{
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 300
+        return 400
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -79,7 +79,7 @@ class EventsViewController: UITableViewController{
         cell.ownerId.text = eventsArray[indexPath.row].ownerid
         
         let imagesURLS = URL(string: eventsArray[indexPath.row].imageurl)
-        let eventimages = cell.EventImageView.kf.setImage(with: imagesURLS)
+        cell.EventImageView.kf.setImage(with: imagesURLS)
         
         return cell
     }
@@ -94,6 +94,9 @@ class EventsViewController: UITableViewController{
         vc?.descriptionn = eventsArray[indexPath.row].description
         vc?.location = eventsArray[indexPath.row].location
         vc?.ownernamee = eventsArray[indexPath.row].ownername
+        vc?.imageURl = eventsArray[indexPath.row].imageurl
+        
+        
         
         
         

@@ -13,6 +13,8 @@ import FirebaseStorage
 
 class SignUpViewController: UIViewController {
 
+    
+    @IBOutlet weak var signupscrollview: UIScrollView!
     @IBOutlet weak var fnameTextField: UITextField!
     @IBOutlet weak var lastnameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -33,6 +35,11 @@ class SignUpViewController: UIViewController {
         errorLabel.alpha = 0
         
         setUpProfileImage()
+        signupscrollview.layer.cornerRadius = 30
+        profileImage.layer.cornerRadius = profileImage.frame.size.width/2
+        
+        
+        
         
     }
     
@@ -176,7 +183,8 @@ class SignUpViewController: UIViewController {
     func setUpProfileImage(){
         
         
-        profileImage.layer.cornerRadius = profileImage.frame.size.width/2
+        
+//        profileImage.layer.cornerRadius = profileImage.frame.size.width/2
         profileImage.clipsToBounds = true
         profileImage.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(presentPicker))

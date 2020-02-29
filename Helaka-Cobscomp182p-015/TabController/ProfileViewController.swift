@@ -80,7 +80,6 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
     
     @objc func handleSignOutButtonTapped(){
 
-
         UserDefaults.standard.removeObject(forKey: "userLogIn")
         UserDefaults.standard.removeObject(forKey: "userId")
         UserDefaults.standard.removeObject(forKey: "userLogged")
@@ -116,9 +115,6 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
         
     }
         
-    
-    
-    
     
     func retriveUserData(){
 

@@ -23,6 +23,7 @@ class AddEventViewController: UIViewController ,UIImagePickerControllerDelegate,
     
     var image: UIImage? = nil
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addEventScrollview: UIScrollView!
     @IBOutlet weak var eventDateTextField: UITextField!
     @IBOutlet weak var eventNameTextField: UITextField!
     @IBOutlet weak var eventLocationTextField: UITextField!
@@ -47,6 +48,8 @@ class AddEventViewController: UIViewController ,UIImagePickerControllerDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addEventScrollview.layer.cornerRadius = 30
 
         checkLoggedInUserStatus()
         
