@@ -23,22 +23,12 @@ class EventCell: UITableViewCell {
     
     @IBOutlet weak var ownerDescription: UILabel!
     
-    
-    //    func setEvent(event: Event){
-//        
-//        EventImageView.image = event.image
-//        eventName.text = event.eventname
-//    }
-    
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
-              EventImageView.layer.cornerRadius = 9
+        EventImageView.layer.cornerRadius = 9
         EventdetailsView.layer.cornerRadius = 12
     }
-    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

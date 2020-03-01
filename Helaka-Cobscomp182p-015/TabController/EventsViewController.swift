@@ -97,10 +97,6 @@ class EventsViewController: UITableViewController{
         vc?.imageURl = eventsArray[indexPath.row].imageurl
         
         
-        
-        
-        
-        
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     
@@ -127,17 +123,7 @@ class EventsViewController: UITableViewController{
                     let ownerId = document.data()["ownerID"] as! String
                     
                     let imageurll =  document.data()["EventImageurl"] as? String
-                    
-//                    let imageurl = document.data()["EventImageurl"] as? String
-                    
-//                    let imageURL = URL(string: imageurl!)!
-                    
-                    print(imageurll)
-//
-//                    
-//
-//                    let image = UIImage(data: imageData)
-                    
+            
                     let events = Eventss(eventname: eventname!, eventdate: Eventdate!, imageurl: imageurll!, description: eventDescription!, location:eventLocation, ownername: ownerName, ownerid: ownerId)
                     
                     self.eventsArray.append(events)
@@ -147,10 +133,6 @@ class EventsViewController: UITableViewController{
                         print(events)
                 }
             }
-            
-            print(self.eventsArray) // <-- This prints the content in db correctly
-
-//            }
         }
         
         

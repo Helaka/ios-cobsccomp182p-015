@@ -18,6 +18,9 @@ class EditEventViewController: UIViewController {
     @IBOutlet weak var eventLocationEdit: UITextField!
     
     @IBOutlet weak var eventTitle: UILabel!
+    @IBOutlet weak var editeventOverviewscrolview: UIScrollView!
+    
+    @IBOutlet weak var Editpageimageview: UIImageView!
     var finaleventname = ""
     var finaleventdescription = ""
     var finaleventlocation = ""
@@ -27,6 +30,9 @@ class EditEventViewController: UIViewController {
         super.viewDidLoad()
         
       setEditData()
+        
+        Editpageimageview.layer.cornerRadius = 30
+        editeventOverviewscrolview.layer.cornerRadius = 30
         
     
     }

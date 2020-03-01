@@ -16,22 +16,24 @@ import LocalAuthentication
 
 class ProfileViewController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var profileoverview: UIView!
+    @IBOutlet weak var profilebackgroundimage: UIImageView!
     @IBOutlet weak var profileimage: UIImageView!
     @IBOutlet weak var usenameLabel: UILabel!
     
     @IBOutlet weak var emailTextLabel: UILabel!
     @IBOutlet weak var contactNumberLabel: UILabel!
     
-//    @IBOutlet weak var saveButton: UIButton!
-//    @IBOutlet weak var userNameTextField: UILabel!
-    
-//    let storageRef = Storage.storage().reference(forURL:"gs://event-app-93d34.appspot.com")
-//    let databaseRef = Database.database().reference()
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        profileoverview.layer.cornerRadius = 30
+        profilebackgroundimage.layer.cornerRadius = 5
+        profileimage.layer.cornerRadius = profileimage.frame.size.width/2
+        
+        
+        
+        
 
         // Do any additional setup after loading the view.
         
@@ -43,7 +45,7 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
         
         view.backgroundColor = UIColor.white
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title =  "Profile"
+//        navigationItem.title =  "Profile"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign out", style: .done, target: self, action: #selector(handleSignOutButtonTapped))
         
        
@@ -76,7 +78,6 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
 //        }
 //    }
 //
-    
     
     @objc func handleSignOutButtonTapped(){
 
@@ -135,8 +136,8 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
 
 
 
-                     self.usenameLabel.text = (document.get("firstname") as! String)
-                     self.emailTextLabel.text = (document.get("email") as! String)
+                    self.usenameLabel.text = (document.get("firstname") as! String)
+                    self.emailTextLabel.text = (document.get("email") as! String)
                     let profile = (document.get("profileimageurl") as! String)
                     self.profileimage.kf.setImage(with: URL(string: profile), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
 
