@@ -30,6 +30,7 @@ struct Eventss {
     
     var ownerid : String
     
+
 }
 
 
@@ -95,6 +96,7 @@ class EventsViewController: UITableViewController{
         vc?.location = eventsArray[indexPath.row].location
         vc?.ownernamee = eventsArray[indexPath.row].ownername
         vc?.imageURl = eventsArray[indexPath.row].imageurl
+        vc?.uid = eventsArray[indexPath.row].ownerid
         
         
         self.navigationController?.pushViewController(vc!, animated: true)

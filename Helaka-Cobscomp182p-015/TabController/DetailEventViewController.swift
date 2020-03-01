@@ -26,7 +26,9 @@ class DetailEventViewController: UIViewController {
     @IBOutlet weak var goingErrorLable: UILabel!
     @IBOutlet weak var goingSignUpButtonClick: UIButton!
     @IBOutlet weak var goingCount: UILabel!
+    @IBOutlet weak var uidLabel: UILabel!
     
+    @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var CountOverView: UIView!
     
     @IBOutlet weak var likeCountimageview: UIImageView!
@@ -35,12 +37,16 @@ class DetailEventViewController: UIViewController {
     @IBOutlet weak var sharecountimageview: UIImageView!
     // going count
     
+    @IBOutlet weak var likeCountLabel: UILabel!
     var attendeceCount: Int = 0
    
     
     
     var image = UIImage()
     var loggedInUser = ""
+
+    // like count
+     let count = ""
     
     var date = ""
     var name = ""
@@ -48,6 +54,7 @@ class DetailEventViewController: UIViewController {
     var descriptionn = ""
     var location = ""
     var imageURl = ""
+    var uid = ""
    
     var eventname = ""
     var eventlocation = ""
@@ -56,6 +63,8 @@ class DetailEventViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         // hide error message and signup button
         
@@ -66,6 +75,9 @@ class DetailEventViewController: UIViewController {
         // set goingcount label to 0
         
         goingCount.text = "0"
+     
+        
+        
         
         // get goin count
         
@@ -86,12 +98,14 @@ class DetailEventViewController: UIViewController {
         eventDescription.text = "\(descriptionn)"
         eventLocation.text = "\(location)"
         ownername.text = "\(ownernamee)"
+        uidLabel.text = "\(uid)"
         
         let imagesURLS = URL(string: "\(imageURl)")
         eventImageView.kf.setImage(with: imagesURLS)
         
         retriveUserData()
         checkLoggedInUserStatus()
+        getEventOwnerProfile()
         
     }
     
@@ -171,6 +185,8 @@ class DetailEventViewController: UIViewController {
         
         if Auth.auth().currentUser == nil{
 
+            
+            goingErrorLable.text = "Please login to mark attendence"
             goingErrorLable.alpha = 1
             
             goingSignUpButtonClick.alpha = 1
@@ -183,24 +199,12 @@ class DetailEventViewController: UIViewController {
             
             goingCount.alpha = 1
             goingSignUpButtonClick.alpha = 0
-            
-            
-//            goingButton.addTarget(self, action: "updateGoingCount", for: .touchUpInside)
+        
             
             updateGoingCount()
             
-            getLikeCount()
-//
-//            self.attendeceCount+=1
-//
-//
-//
-//
-//         self.goingCount.text = String(self.attendeceCount)
-            
-           
-            
-//         UserDefaults.standard.set(goingCount.text, forKey: "goingcount")
+            getGoingCount()
+
         }
     }
     
@@ -209,13 +213,46 @@ class DetailEventViewController: UIViewController {
         
         checkRegisterdUser()
         
-       
-        
+    }
     
+    func LikeButtonCheck(){
         
-        
+        if Auth.auth().currentUser == nil{
+            
+            
+            goingErrorLable.text = "Please login to Like this event"
+            goingErrorLable.alpha = 1
+            
+            goingSignUpButtonClick.alpha = 1
+            likeButton.alpha = 1
+            goingCount.alpha = 0
+            
+            
+        }else{
+            
+            goingErrorLable.alpha = 0
+            
+            goingCount.alpha = 1
+            goingSignUpButtonClick.alpha = 0
+            
+            
+            updateLikeCount()
+            
+//            getGoingCount()
+            getLikeCount()
+            
+        }
         
     }
+    
+    
+    
+    
+    @IBAction func likeButtonClick(_ sender: Any) {
+        
+        LikeButtonCheck()
+    }
+    
     
     
     @IBAction func goinSignUpButtonClick(_ sender: Any) {
@@ -258,7 +295,7 @@ class DetailEventViewController: UIViewController {
     
     
     
-    func getLikeCount(){
+    func getGoingCount(){
         
         let db = Firestore.firestore()
         
@@ -282,5 +319,83 @@ class DetailEventViewController: UIViewController {
         }
     }
     
+    
+    
+    func updateLikeCount(){
+        
+    
+        let database = Firestore.firestore().collection("Events").document(eventName.text!)
+        
+        database.updateData(["likecount": FieldValue.increment(Int64(1))]) { (err) in
+            
+            if let err = err {
+                
+                print(err.localizedDescription)
+            }else{
+                
+                
+                self.likeButton.isUserInteractionEnabled = false
+                
+                
+            }
+            
+            
+            
+        }
+    }
+    
+    
+    
+   
+    func getLikeCount(){
+        
+        let db = Firestore.firestore()
+        
+        let docRef = db.collection("Events").document(eventName.text!)
+        
+        
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                print("Document data: \(dataDescription)")
+                
+                
+                let count = ((document.get("likecount") as! NSNumber))
+                
+                self.likeCountLabel.text = count.stringValue
+                
+                
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
+    
+    
+    
+    
+    func getEventOwnerProfile(){
+        
+        
+        let ownerProfile = Firestore.firestore()
+        
+        let ownerProfileRef = ownerProfile.collection("users").document(uidLabel.text!)
+        
+        
+        ownerProfileRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                _ = document.data().map(String.init(describing:)) ?? "nil"
+                //                print("Document data: \(dataDescription)")
+                
+                let ownerProfileImage = (document.get("profileimageurl") as! String)
+                self.OwnerProfileimage.kf.setImage(with: URL(string: ownerProfileImage), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
+                
+            } else {
+                print("Document does not exist")
+                
+                
+            }
+        }
+    }
   
 }
