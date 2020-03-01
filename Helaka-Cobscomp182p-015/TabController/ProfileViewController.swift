@@ -49,35 +49,35 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign out", style: .done, target: self, action: #selector(handleSignOutButtonTapped))
         
        
-        
+     
         
         
     }
     
     
     
-//
-//    @objc fileprivate func handleFaceIdTouchId(){
-//
-//        let context = LAContext()
-//
-//        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
-//            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an access to NIBM Events we need to check your faceId/TouchID") { (wasSuccessful, error) in
-//                if wasSuccessful{
-//
-//                    self.dismiss(animated: true, completion:nil)
-//
-//
-//                }else{
-//                    Alert.showBasics(title: "Incorrect credentials", msg: "Please try again", vc: self)
-//                }
-//            }
-//
-//        }else{
-//            Alert.showBasics(title: "FaceID/TouchID is not configured", msg: "Please go to settings", vc: self)
-//        }
-//    }
-//
+
+    @objc fileprivate func handleFaceIdTouchId(){
+
+        let context = LAContext()
+
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an access to NIBM Events we need to check your faceId/TouchID") { (wasSuccessful, error) in
+                if wasSuccessful{
+
+                    self.dismiss(animated: true, completion:nil)
+
+
+                }else{
+                    Alert.showBasics(title: "Incorrect credentials", msg: "Please try again", vc: self)
+                }
+            }
+
+        }else{
+            Alert.showBasics(title: "FaceID/TouchID is not configured", msg: "Please go to settings", vc: self)
+        }
+    }
+
     
     @objc func handleSignOutButtonTapped(){
 
@@ -111,6 +111,8 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
             }
         }else{
         
+            
+            handleFaceIdTouchId()
             retriveUserData()
         }
         
@@ -137,6 +139,7 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
 
 
                     self.usenameLabel.text = (document.get("firstname") as! String)
+                    self.contactNumberLabel.text = (document.get("phoneNumber" ) as! String)
                     self.emailTextLabel.text = (document.get("email") as! String)
                     let profile = (document.get("profileimageurl") as! String)
                     self.profileimage.kf.setImage(with: URL(string: profile), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
@@ -148,4 +151,9 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
 
     }
     
+    @IBAction func redirectToHome(_ sender: Any) {
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarControllerIdentifier")
+        self.present(vc, animated: true, completion: nil)
+    }
 }

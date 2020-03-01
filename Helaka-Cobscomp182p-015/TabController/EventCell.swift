@@ -14,6 +14,7 @@ class EventCell: UITableViewCell {
     @IBOutlet weak var eventName: UILabel!
     // Configure the view for the selected state
     
+    @IBOutlet weak var ownerprofil: UIImageView!
     @IBOutlet weak var EventdetailsView: UIView!
     @IBOutlet weak var ownerName: UILabel!
     @IBOutlet weak var eventLocation: UILabel!

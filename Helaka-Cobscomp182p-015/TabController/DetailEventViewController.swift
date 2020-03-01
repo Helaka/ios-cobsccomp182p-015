@@ -28,10 +28,13 @@ class DetailEventViewController: UIViewController {
     @IBOutlet weak var goingCount: UILabel!
     @IBOutlet weak var uidLabel: UILabel!
     
+    @IBOutlet weak var profileImageButton: UIView!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var CountOverView: UIView!
     
+    @IBOutlet weak var profileButtonClick: UIButton!
     @IBOutlet weak var likeCountimageview: UIImageView!
+
     
     @IBOutlet weak var goingCountimageview: UIImageView!
     @IBOutlet weak var sharecountimageview: UIImageView!
@@ -85,7 +88,7 @@ class DetailEventViewController: UIViewController {
         CountOverView.layer.cornerRadius = 20
         likeCountimageview.layer.cornerRadius = likeCountimageview.frame.size.width/2
         goingCountimageview.layer.cornerRadius = goingCountimageview.frame.size.width/2
-        sharecountimageview.layer.cornerRadius = sharecountimageview.frame.size.width/2
+//        sharecountimageview.layer.cornerRadius = sharecountimageview.frame.size.width/2
  
         
         OwnerDeatilsView.layer.cornerRadius = 20
@@ -107,6 +110,8 @@ class DetailEventViewController: UIViewController {
         checkLoggedInUserStatus()
         getEventOwnerProfile()
         
+        setUpProfileImage()
+        
     }
     
     @IBAction func editButtonCLick(_ sender: Any) {
@@ -122,11 +127,23 @@ class DetailEventViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let vc = segue.destination as! EditEventViewController
-        vc.finaleventname = self.eventname
-        vc.finaleventlocation = self.eventlocation
-        vc.finaleventdate = self.eventdate
-        vc.finaleventdescription = self.eventdescription
+        
+        
+        if segue.identifier == "eventeditname"{
+           
+            let vc = segue.destination as! EditEventViewController
+            
+            vc.finaleventname = self.eventname
+            vc.finaleventlocation = self.eventlocation
+            vc.finaleventdate = self.eventdate
+            vc.finaleventdescription = self.eventdescription
+        }
+        else{
+              let vc = segue.destination as! EventOwnerProfileViewController
+            
+                vc.userid = self.uid
+        }
+        
         
     }
     
@@ -397,5 +414,52 @@ class DetailEventViewController: UIViewController {
             }
         }
     }
+    
+    
+    func setUpProfileImage(){
+        
+        
+        
+        //        profileImage.layer.cornerRadius = profileImage.frame.size.width/2
+        OwnerProfileimage.clipsToBounds = true
+        OwnerProfileimage.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageclick))
+        OwnerProfileimage.addGestureRecognizer(tapGesture)
+        
+        
+    }
+    
+    
+    @objc func imageclick(){
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EventOwnerProfile")
+        self.present(vc, animated: true, completion: nil)
+        
+               performSegue(withIdentifier: "eventeditname", sender: self)
+    }
   
+//    @IBAction func profileImagBtnClick(_ sender: Any) {
+//
+//
+//
+//    }
+//
+//    @IBAction func ownerProfileImageClick(_ sender: Any) {
+//
+//        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EventOwnerProfile")
+//        self.present(vc, animated: true, completion: nil)
+//    }
+//
+
+    @IBAction func profileimagebuttonclick(_ sender: Any) {
+        
+       
+          uid = uidLabel.text!
+        
+         performSegue(withIdentifier: "profileConnection", sender: self)
+    }
+    
+    
+    
+    
 }

@@ -30,6 +30,8 @@ struct Eventss {
     
     var ownerid : String
     
+  
+    
 
 }
 
@@ -132,7 +134,7 @@ class EventsViewController: UITableViewController{
                     
                     self.tableView.reloadData()
                         
-                        print(events)
+                        
                 }
             }
         }

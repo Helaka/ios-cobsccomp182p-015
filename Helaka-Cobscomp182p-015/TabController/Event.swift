@@ -19,8 +19,9 @@ class Event {
     var eventlocation: String
     var ownername : String
     var ownerid: String
+    var ownerprofile : UIImage
     
-    init(image: UIImage , eventname:String , eventdescription:String , eventdate:String , eventlocation:String, ownername:String , ownerid: String) {
+    init(image: UIImage , eventname:String , eventdescription:String , eventdate:String , eventlocation:String, ownername:String , ownerid: String,ownerprofile:UIImage) {
         
         self.image = image
         self.eventname = eventname
@@ -30,6 +31,7 @@ class Event {
         self.eventlocation = eventlocation
         self.ownername = ownername
         self.ownerid = ownerid
+        self.ownerprofile = ownerprofile
     }
     
 }

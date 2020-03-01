@@ -14,6 +14,7 @@ import FirebaseStorage
 class SignUpViewController: UIViewController {
 
     
+    @IBOutlet weak var phoneNumbertxtField: UITextField!
     @IBOutlet weak var signupscrollview: UIScrollView!
     @IBOutlet weak var fnameTextField: UITextField!
     @IBOutlet weak var lastnameTextField: UITextField!
@@ -51,7 +52,7 @@ class SignUpViewController: UIViewController {
         
         if fnameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lastnameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
+            passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || phoneNumbertxtField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             
             return "Please fill all the text fields"
         }
@@ -100,7 +101,7 @@ class SignUpViewController: UIViewController {
 //    Event Page Redirect
     func redirectToHomeController(){
         
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarControllerIdentifier")
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginView")
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -116,6 +117,8 @@ class SignUpViewController: UIViewController {
         let emailText = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         let passwordText = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        let phoneText = phoneNumbertxtField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         
         
@@ -156,7 +159,7 @@ class SignUpViewController: UIViewController {
                     storageProfileRef.downloadURL(completion: { (url, error) in
                         
                         if let metaImageUrl = url?.absoluteString{
-                            database.collection("users").document(result!.user.uid).setData(["firstname":fNameText, "lastname":lNameText, "email":emailText, "password":passwordText, "profileimageurl":metaImageUrl, "uid": result!.user.uid ])  { (error) in
+                            database.collection("users").document(result!.user.uid).setData(["firstname":fNameText, "lastname":lNameText, "email":emailText, "password":passwordText, "phoneNumber": phoneText, "profileimageurl":metaImageUrl, "uid": result!.user.uid ])  { (error) in
                                 
                                 
                                 if error != nil {
