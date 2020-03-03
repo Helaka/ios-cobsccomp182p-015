@@ -81,21 +81,36 @@ class AddEventViewController: UIViewController ,UIImagePickerControllerDelegate,
         
         let context = LAContext()
         
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an access to NIBM Events we need to check your faceId/TouchID") { (wasSuccessful, error) in
-                if wasSuccessful{
-                    
-                    self.dismiss(animated: true, completion:nil)
-                    
-                    
-                }else{
-                    Alert.showBasics(title: "Incorrect credentials", msg: "Please try again", vc: self)
+        var error : NSError?
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error){
+            
+            let reason = "identify your self"
+            
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason){
+                
+                [weak self] success, authenticationError in
+                
+                DispatchQueue.main.async {
+                    if success{
+                        self!.dismiss(animated: true, completion:nil)
+                    }else{
+                        
+                        let ac = UIAlertController(title: "Authentication failed", message: "You could Not be verified, Please Try again", preferredStyle: .alert)
+                        
+                        ac.addAction(UIAlertAction(title: "ok", style: .default))
+                        self?.present(ac , animated: true)
+                        
+                    }
                 }
             }
-            
         }else{
-            Alert.showBasics(title: "FaceID/TouchID is not configured", msg: "Please go to settings", vc: self)
+            
+            let ac = UIAlertController(title: "Biometry UNavailable", message: "not configures", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "ok", style: .default))
+            present(ac , animated: true)
         }
+        
     }
     
     

@@ -30,5 +30,25 @@ class Helaka_Cobscomp182p_015UITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
+    
+    func testUIAuthentication(){
+        
+        let app = XCUIApplication()
+        app.tabBars.buttons["Profile"].tap()
+        
+        let emailTextField = app.textFields["Email"]
+        emailTextField.tap()
+        emailTextField.tap()
+        
+        let loginButton = app.buttons["Login"]
+        loginButton.tap()
+        emailTextField.tap()
+        app.secureTextFields["Password"].tap()
+        loginButton.tap()
+        loginButton.tap()
+        loginButton.tap()
+        
+    }
+    
 
 }

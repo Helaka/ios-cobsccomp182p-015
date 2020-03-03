@@ -221,6 +221,8 @@ class DetailEventViewController: UIViewController {
             updateGoingCount()
             
             getGoingCount()
+            
+            
 
         }
     }
@@ -432,10 +434,10 @@ class DetailEventViewController: UIViewController {
     
     @objc func imageclick(){
         
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EventOwnerProfile")
-        self.present(vc, animated: true, completion: nil)
-        
-               performSegue(withIdentifier: "eventeditname", sender: self)
+//        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EventOwnerProfile")
+//        self.present(vc, animated: true, completion: nil)
+//        
+//               performSegue(withIdentifier: "eventeditname", sender: self)
     }
   
 //    @IBAction func profileImagBtnClick(_ sender: Any) {
@@ -457,6 +459,36 @@ class DetailEventViewController: UIViewController {
           uid = uidLabel.text!
         
          performSegue(withIdentifier: "profileConnection", sender: self)
+    }
+    
+    
+    func markGoingEvent(){
+        
+        
+        
+        guard let uid = Auth.auth().currentUser?.uid else{ return }
+        
+        print(uid)
+        
+        let db = Firestore.firestore()
+        
+        let docRef = db.collection("users").document(uid)
+        
+        print(docRef)
+        
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                print("Document data: \(dataDescription)")
+                
+                
+                
+              
+                
+            } else {
+                print("Document does not exist")
+            }
+        }
     }
     
     
