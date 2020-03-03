@@ -121,7 +121,7 @@ class ProfileViewController: UIViewController , UIImagePickerControllerDelegate,
         if Auth.auth().currentUser == nil{
             
             DispatchQueue.main.async {
-                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginView")
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "indexView")
                 self.present(vc, animated: true, completion: nil)
                 
                 return

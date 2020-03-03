@@ -372,7 +372,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="vPm-Mf-oef" kind="show" id="amp-Ce-b4v"/>
+                                            <segue destination="VaI-0h-FHc" kind="show" id="OCz-75-s6o"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -446,7 +446,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VlB-dI-xYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2786.4000000000001" y="841.62561576354688"/>
+            <point key="canvasLocation" x="2522" y="457"/>
         </scene>
         <!--Profile-->
         <scene sceneID="zKQ-UO-SAS">
@@ -679,7 +679,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAY-Vp-Tdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2580" y="-28.078817733990149"/>
+            <point key="canvasLocation" x="3503" y="457"/>
         </scene>
         <!--Profile-->
         <scene sceneID="UqG-ZA-pdd">
@@ -1316,7 +1316,7 @@
                                 <rect key="frame" x="-3" y="0.0" width="378" height="812"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RpT-uR-t5G">
-                                <rect key="frame" x="0.0" y="127" width="375" height="685"/>
+                                <rect key="frame" x="0.0" y="83" width="375" height="729"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilepic" translatesAutoresizingMaskIntoConstraints="NO" id="dTG-Gb-Nia">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="186"/>
@@ -1711,7 +1711,6 @@
         <image name="user" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4Ae-39-f3K"/>
-        <segue reference="amp-Ce-b4v"/>
+        <segue reference="OCz-75-s6o"/>
     </inferredMetricsTieBreakers>
 </document>
