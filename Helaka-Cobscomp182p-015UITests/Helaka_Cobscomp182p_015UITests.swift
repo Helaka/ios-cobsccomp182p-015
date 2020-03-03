@@ -12,9 +12,9 @@ class Helaka_Cobscomp182p_015UITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-
+continueAfterFailure = false
         // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
+      
 
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
@@ -31,22 +31,58 @@ class Helaka_Cobscomp182p_015UITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
-    func testUIAuthentication(){
+//    func testUIAuthentication(){
+//
+//        let app = XCUIApplication()
+//        app.tabBars.buttons["Profile"].tap()
+//
+//        let emailTextField = app.textFields["Email"]
+//        emailTextField.tap()
+//        emailTextField.tap()
+//
+//        let loginButton = app.buttons["Login"]
+//        loginButton.tap()
+//        emailTextField.tap()
+//        app.secureTextFields["Password"].tap()
+//        loginButton.tap()
+//        loginButton.tap()
+//        loginButton.tap()
+//        cd
+//    }
+    
+    
+    func testLoginSuccess(){
+        
+//        continueAfterFailure = false
+        
+        let validEmail = "helaka@gmail.com"
+        let validPassword = "33pasan33##"
         
         let app = XCUIApplication()
-        app.tabBars.buttons["Profile"].tap()
+        let profileButton = app.tabBars.buttons["Profile"]
+        profileButton.tap()
         
         let emailTextField = app.textFields["Email"]
-        emailTextField.tap()
+      
+    
+         XCTAssertTrue(emailTextField.exists)
+        
         emailTextField.tap()
         
-        let loginButton = app.buttons["Login"]
-        loginButton.tap()
-        emailTextField.tap()
-        app.secureTextFields["Password"].tap()
-        loginButton.tap()
-        loginButton.tap()
-        loginButton.tap()
+        emailTextField.typeText(validEmail)
+        
+        
+        let passwordTextField = app.secureTextFields["Password"]
+        XCTAssertTrue(passwordTextField.exists)
+        
+        passwordTextField.tap()
+        passwordTextField.typeText(validPassword)
+        
+        
+        app.buttons["Login"].tap()
+        profileButton.tap()
+       
+        
         
     }
     

@@ -44,7 +44,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSFaceIDUsageDescription</key>
-	<string>To be able to login in the application</string>
+	<string>handleFaceIdTouchId</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>To be able to photos</string>
 	<key>NSCameraUsageDescription</key>
